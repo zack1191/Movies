@@ -1,19 +1,40 @@
-package com.hha.heinhtetaung.movies
+package com.hha.heinhtetaung.movies.activities
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import com.hha.heinhtetaung.movies.R
+import com.hha.heinhtetaung.movies.adapters.MovieArtistAdapter
+import com.hha.heinhtetaung.movies.adapters.MovieGenreAdapter
+import com.hha.heinhtetaung.movies.adapters.MovieNameAdapter
+import com.hha.heinhtetaung.movies.viewholders.MovieGenreViewHolder
 
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var mMovieGenreAdapter: MovieGenreAdapter
+    private lateinit var mMovieArtistAdapter: MovieArtistAdapter
+    private lateinit var mMovieNameAdapter: MovieNameAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+//        setSupportActionBar(toolbar)
+
+        mMovieGenreAdapter = MovieGenreAdapter(this)
+        rvGenre.adapter = mMovieGenreAdapter
+        rvGenre.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        mMovieArtistAdapter = MovieArtistAdapter(this)
+        rvArtists.adapter = mMovieArtistAdapter
+        rvArtists.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        mMovieNameAdapter = MovieNameAdapter(this)
+        rvMovies.adapter = mMovieNameAdapter
+        rvMovies.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

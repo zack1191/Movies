@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">	#243447</color>
+    <color name="colorPrimaryDark">#141d26</color>
+    <color name="colorAccent">#c51f5d</color>
+
+
+    <color name="midnightExpress">#252C3E</color>
+    <color name="linkWater">#CBCED4</color>
+    <color name="stormGrey">#767C91</color>
+    <color name="mischka">#A4A8B0</color>
+
+    <color name="whitefull">#ffffff</color>
+    <color name="blackfull">#000000</color>
+
+
+
+
+
 </resources>

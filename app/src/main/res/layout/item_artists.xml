@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvArtists"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="4dp">
+
+
+        <ImageView
+            android:id="@+id/ivArtists"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/colorPrimary" />
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvArtistsName"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvArtists"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center_horizontal"
+        android:text="Robert Downey Jr"
+        android:textColor="@color/whitefull"
+        android:textSize="@dimen/text_small" />
+</RelativeLayout>
